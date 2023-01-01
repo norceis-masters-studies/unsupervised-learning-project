@@ -1,51 +1,39 @@
-# Uczenie nienadzorowane - projekt
+# Unsupervised learning project
 
-### Wymagania
+The project is about mapping latin emnist letters to japanese characters called kuzushiji via autoencoder, clustering them and matching letter to letter via cluster population number to each other in order to translate it.
 
-**Wersja Python** - 3.10
+### Requirements
 
-##### Biblioteki
+**Python** - 3.10
 
-Wymagane biblioteki znajdują się w pliku `requirements.txt`, znajdującym się w katalogu głównym projektu.
+##### Libraries
+
+Required libraries are in "requirements.txt".
 
 ###### Pip
-Aby zainstalować biblioteki za pomocą `pip`, nalezy uruchomić polecenie `pip install -r requirements.txt`
+To install libraries - run "pip install -r requirements.txt"
 
-
-# Instrukcja
+# Instructions
 
 ## Jupyter
-### Generacja danych
+### Data generation
 
-Aby wygenerować dane, należy uruchomić notebook o nazwie `generate_sheets.ipynb`, znajdujący się w scieżce `scr/notebooks`. 
-Po uruchomieniu, w katalogu w którym został uruchomiony notebook, powinny zostać utworzone pliki `empty_sheet_kuzushiji.png` 
-dla znaków **KUZUSHIJI-49** oraz `empty_sheet_emnist.png` dla **EMNIST-BYMERGE**.
+To generate data, run "/src/notebooks/generate_sheets.ipynb". After running it there should be 35 pages of each character variant in /data/generated.
 
-### Uczenie
+### Learning
 
-Aby nauczyć autoencoder, należy uruchomić notebook o nazwie `autoencoder.ipynb`, znajdujący się w scieżce `scr/notebooks`.
-Po uruchomieniu, w katalogu `data/models`, powinny zostać utworzone pliki zawierajace wagę modeli 
-dla znaków **KUZUSHIJI-49** oraz **EMNIST-BYMERGE**.
+To make the autoencoder learn, run "/src/notebooks/autoencoder.ipynb". After running it there should be 2 .pth files with autoencoder parameters in /data/models.
 
 ### Enkodowanie
 
-Aby zakodować dane, należy uruchomić notebook o nazwie `encoded_data_generation.ipynb`, znajdujący się w scieżce `scr/notebooks`.
-Po uruchomieniu, w katalogu `data/encoded_data`, powinny zostać utworzone pliki zawierajace zakodowane dane
-dla znaków **KUZUSHIJI-49** oraz **EMNIST-BYMERGE**.
+To encode data, run "/src/notebooks/encoded_data_generation.ipynb". After running it there should be 2 .npz files, which are ancoded data representations in /data/encoded_data
 
 ### Klasteryzacja
 
-Aby przeprowadzić klasteryzację, należy uruchomić notebook o nazwie `clustering.ipynb`, znajdujący się w scieżce `scr/notebooks`.
-W pliku zaprezentowane zostały różne sposoby wizualizacji danych oraz przeszukiwanie róznymi
-metodami klasteryzacji.
+To cluster, run "/src/notebooks/clustering.ipynb". After running it you should inspect which method do you prefer and remember your choice for generating translated pages.
 
 ## Streamlit
 
-Aby uruchomić projekt poprzez Streamlit, należy uruchomić polecenie `python -m streamlit run src/streamlit.py` 
-w głównym katalogu projektu.
+To run project through Streamlit, run `python -m streamlit run src/streamlit.py`. This depicts all of the project's stages.
 
-Uruchomiona strona prezentuje wszystkie etapy projektu, wraz z możliwością wyboru danych, modelu,
-metody klasteryzacji oraz sposobu wizualizacji danych.
-
-Poszegolne kroki sa opisane w odpowiednich sekcjach
 
