@@ -1,0 +1,7 @@
+
+https://www.comet.com/
+
+https://pytorch.org/
+https://www.pytorchlightning.ai/
+
+https://code.visualstudio.com/docs/remote/containers

@@ -1,0 +1,17 @@
+einops
+emnist
+jupyter
+matplotlib
+opencv-python
+pandas
+scipy
+torch
+torchaudio
+torchvision
+numpy
+streamlit
+streamlit_option_menu
+yellowbrick
+umap-learn
+pyamg
+scikit-learn
