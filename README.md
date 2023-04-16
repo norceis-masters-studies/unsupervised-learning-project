@@ -24,11 +24,11 @@ To generate data, run "/src/notebooks/generate_sheets.ipynb". After running it t
 
 To make the autoencoder learn, run "/src/notebooks/autoencoder.ipynb". After running it there should be 2 .pth files with autoencoder parameters in /data/models.
 
-### Enkodowanie
+### Encoding
 
 To encode data, run "/src/notebooks/encoded_data_generation.ipynb". After running it there should be 2 .npz files, which are ancoded data representations in /data/encoded_data
 
-### Klasteryzacja
+### Clustering
 
 To cluster, run "/src/notebooks/clustering.ipynb". After running it you should inspect which method do you prefer and remember your choice for generating translated pages.
 
